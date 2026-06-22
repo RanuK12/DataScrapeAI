@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "datascrapeai"
+version = "0.1.0"
+description = "CLI Scraper + AI Summarizer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "groq",
+    "lxml",
+]
+
+[project.scripts]
+datascrapeai = "datascrapeai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
